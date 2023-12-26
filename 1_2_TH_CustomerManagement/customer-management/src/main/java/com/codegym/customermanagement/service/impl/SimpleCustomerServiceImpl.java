@@ -1,3 +1,4 @@
+
 package com.codegym.customermanagement.service.impl;
 
 import com.codegym.customermanagement.model.Customer;
@@ -34,3 +35,4 @@ public class SimpleCustomerServiceImpl implements ISimpleCustomerService {
         return null;
     }
 }
+

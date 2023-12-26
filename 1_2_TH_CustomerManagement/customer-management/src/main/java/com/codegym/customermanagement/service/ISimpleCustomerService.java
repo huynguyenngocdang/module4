@@ -1,3 +1,4 @@
+
 package com.codegym.customermanagement.service;
 
 import com.codegym.customermanagement.model.Customer;
@@ -8,3 +9,4 @@ public interface ISimpleCustomerService {
     List<Customer> getCustomers();
     Customer getCustomerById(int id);
 }
+

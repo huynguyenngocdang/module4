@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="22793524-919c-40e6-9dc5-797504d49d73" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/classes/java/main/com/codegym/customermanagement/HelloServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/classes/java/main/com/codegym/customermanagement/controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/classes/java/main/com/codegym/customermanagement/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/classes/java/main/com/codegym/customermanagement/service/ISimpleCustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/classes/java/main/com/codegym/customermanagement/service/impl/SimpleCustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/libs/customer-management-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/tmp/compileJava/compileTransaction/stash-dir/CustomerController.class.uniqueId0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/tmp/compileJava/compileTransaction/stash-dir/SimpleCustomerServiceImpl.class.uniqueId1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/service/ISimpleCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/service/ISimpleCustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/service/impl/SimpleCustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/views/customers/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/views/customers/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/views/customers/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../1_2_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/views/customers/list.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2a3n3qp0fnNVnZ7znToIifTMmdD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.42002302",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Huy\CodeGym\Project module 4\module4\1_1_TH_GreetingSpring\spring-greeting\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\Huy\CodeGym\Project module 4\module4\1_1_TH_GreetingSpring\spring-greeting\src\main\webapp\WEB-INF" />
+      <recent name="C:\Huy\CodeGym\Project module 4\module4\1_1_TH_GreetingSpring\spring-greeting\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.83" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.83" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : com.codegym : spring-greeting-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="7d8f267b-a6fb-49bd-9eef-3510c8de7edd" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57945" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.codegym : spring-greeting-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22793524-919c-40e6-9dc5-797504d49d73" name="Changes" comment="" />
+      <created>1703555934003</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703555934003</updated>
+      <workItem from="1703555935075" duration="4314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
