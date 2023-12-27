@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22793524-919c-40e6-9dc5-797504d49d73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/configuration/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/java/com/codegym/customermanagement/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/templates/info.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../2_5_TH_CustomerManagement/customer-management/src/main/webapp/WEB-INF/templates/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/SpringBoot/spring-boot-example/src/main/java/com/codegym/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/SpringBoot/spring-boot-example/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/SpringBoot/spring-boot-example/src/main/resources/xml-beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lession2/demo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lession2/demo/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lession2/demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lession2/demo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lession2/demo/src/main/java/com/example/demo/none_di/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2_1_TH_EmailValidateMaven/SimpleMailValidation/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2_1_TH_EmailValidateMaven/SimpleMailValidation/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +174,7 @@
       <updated>1703555934003</updated>
       <workItem from="1703555935075" duration="4314000" />
       <workItem from="1703583317954" duration="6000" />
+      <workItem from="1703642124646" duration="686000" />
     </task>
     <servers />
   </component>
