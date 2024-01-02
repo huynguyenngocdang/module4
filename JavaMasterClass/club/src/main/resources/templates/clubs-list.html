@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      lang="en"
+      dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section layout:fragment="body">
+    <div class="container">
+        <form class="row">
+            <div class="col-sm-4 mb-sm-20">
+                <select class="form-control">
+                    <option selected="selected">Default Sorting</option>
+                    <option>Popular</option>
+                    <option>Latest</option>
+                    <option>Average Price</option>
+                    <option>High Price</option>
+                    <option>Low Price</option>
+                </select>
+            </div>
+            <div class="col-sm-2 mb-sm-20">
+                <select class="form-control">
+                    <option selected="selected">Woman</option>
+                    <option>Man</option>
+                </select>
+            </div>
+            <div class="col-sm-3 mb-sm-20">
+                <select class="form-control">
+                    <option selected="selected">All</option>
+                    <option>Coats</option>
+                    <option>Jackets</option>
+                    <option>Dresses</option>
+                    <option>Jumpsuits</option>
+                    <option>Tops</option>
+                    <option>Trousers</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-block btn-round btn-g" type="submit">Apply</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="module-small">
+        <div class="container">
+            <div class="row multi-columns-row">
+                <div th:each="club : ${clubs}" class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="shop-item">
+                        <div class="shop-item-image"><img th:src="${club.photoUrl}" th:alt="${club.title}" />
+                            <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Edit</span></a></div>
+                        </div>
+                        <h4 class="shop-item-title font-alt"><a href="#"><th:block th:text="${club.title}"></th:block></a></h4>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="row">-->
+<!--                <div class="col-sm-12">-->
+<!--                    <div class="pagination font-alt">-->
+<!--                        <a href="#"><i class="fa fa-angle-left"></i></a>-->
+<!--                        <a class="active" href="#">1</a>-->
+<!--                        <a href="#">2</a>-->
+<!--                        <a href="#">3</a>-->
+<!--                        <a href="#">4</a>-->
+<!--                        <a href="#"><i class="fa fa-angle-right"></i></a></div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pagination font-alt">
+                        <a th:href="@{/clubs?page=1}"><i class="fa fa-angle-left"></i></a>
+                        <a th:each="pageNumber : ${#numbers.sequence(1, totalPages)}"
+                           th:href="@{/clubs(page=${pageNumber})}"
+                           th:class="${pageNumber == currentPage} ? 'active'">
+                            <span th:text="${pageNumber}"></span>
+                        </a>
+                        <a th:href="@{/clubs(page=totalPages)}"><i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

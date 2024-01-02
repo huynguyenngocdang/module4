@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b81aba5-8265-4fdd-8626-3e7d3d4d9095" name="Changes" comment="" />
+    <list default="true" id="6b81aba5-8265-4fdd-8626-3e7d3d4d9095" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/java/com/codegym/rungroopcourse/controller/ClubController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/java/com/codegym/rungroopcourse/dto/ClubDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/java/com/codegym/rungroopcourse/model/Club.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/java/com/codegym/rungroopcourse/repository/ClubRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/java/com/codegym/rungroopcourse/service/ClubService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/java/com/codegym/rungroopcourse/service/ClubServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/resources/templates/club-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/rungroopcourse/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaMasterClass/web/src/main/java/com/codegym/web/model/Club.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson-02-spring-controller/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson-02-spring-controller/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson-02-spring-controller/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson-02-spring-controller/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/java/com/codegym/demov2/controller/ClubController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/java/com/codegym/demov2/dto/ClubDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/java/com/codegym/demov2/model/Club.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/java/com/codegym/demov2/repository/ClubRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/java/com/codegym/demov2/service/ClubService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/java/com/codegym/demov2/service/ClubServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/resources/templates/club-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/demov2/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/lesson3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/lesson3/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/lesson3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson3/lesson3/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3_1_TH_CustomerManagement/customer-management/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../3_1_TH_CustomerManagement/customer-management/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/src/main/java/com/example/demo/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/src/main/java/com/example/demo/none_di/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lession2/demo/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../~$ssion2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../~WRL0005.tmp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,6 +210,7 @@
       <updated>1703557060180</updated>
       <workItem from="1703557061171" duration="6762000" />
       <workItem from="1703573365021" duration="2210000" />
+      <workItem from="1703813833195" duration="2609000" />
     </task>
     <servers />
   </component>
