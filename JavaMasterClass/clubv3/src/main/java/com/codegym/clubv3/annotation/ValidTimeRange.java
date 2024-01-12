@@ -1,0 +1,18 @@
+package com.codegym.clubv3.annotation;
+
+import java.lang.annotation.Documented;
+
+import com.codegym.clubv3.annotation.impl.TimeRangeValidator;
+import jakarta.validation.Constraint;
+import jakarta.validation.Payload;
+import java.lang.annotation.*;
+
+@Documented
+@Constraint(validatedBy = TimeRangeValidator.class)
+@Target({ ElementType.TYPE })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ValidTimeRange {
+    String message() default "End time must be after start time";
+    Class<?>[] groups() default {};
+    Class<? extends Payload>[] payload() default {};
+}

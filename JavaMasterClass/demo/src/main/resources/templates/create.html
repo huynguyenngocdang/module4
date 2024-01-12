@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Club</title>
+</head>
+<body>
+<h1>Create a New Club</h1>
+<form th:action="@{/clubs/new}" th:object="${club}" method="post" enctype="multipart/form-data">
+    <p>Title: <input type="text" th:field="*{title}" /></p>
+    <p>Club Image: <input type="file" name="image" /></p>
+    <p><input type="submit" value="Submit" /> <a href="/clubs">Cancel</a></p>
+</form>
+</body>
+</html>

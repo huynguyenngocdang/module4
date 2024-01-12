@@ -53,8 +53,31 @@ public class ClubServiceImpl implements ClubService {
     }
 
     @Override
-    public Club saveClub(ClubDto clubDto) {
+    public Club createClub(ClubDto clubDto) {
         Club club = mapToClub(clubDto);
         return clubRepository.save(club);
+    }
+
+    @Override
+    public void updateClub(ClubDto clubDto) {
+        Club club = mapToClub(clubDto);
+        clubRepository.save(club);
+    }
+
+    @Override
+    public void deleteClub(Long clubId) {
+        clubRepository.deleteById(clubId);
+    }
+
+@Override
+    public Page<Club> searchClubs(String query, int page, int pageSize) {
+        PageRequest pageRequest = PageRequest.of(page - 1, pageSize);
+        return clubRepository.searchClubs(query, pageRequest);
+    }
+
+    @Override
+    public ClubDto getClubById(Long id) {
+        Club club = clubRepository.findById(id).get();
+        return mapToClubDto(club);
     }
 }

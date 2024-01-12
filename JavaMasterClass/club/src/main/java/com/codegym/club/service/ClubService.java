@@ -9,6 +9,11 @@ import java.util.List;
 public interface ClubService {
     List<ClubDto> findAllClub();
     Page<Club> getClubsByPage(int pageNumber, int pageSize);
-    Club saveClub(ClubDto clubDto);
+    ClubDto getClubById(Long id);
+    Club createClub(ClubDto clubDto);
+    void updateClub(ClubDto clubDto);
 
+    void deleteClub(Long clubId);
+//    List<ClubDto> searchClubs(String query);
+    Page<Club> searchClubs(String query, int page, int pageSize);
 }

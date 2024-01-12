@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<section layout:fragment="body">
+    <div class="container">
+        <h1>Find Song Lyrics</h1>
+        <form th:action="@{/lyric}" method="post">
+            <input type="text"
+                   name="band"
+                   placeholder="Enter Band Name" required>
+            <input type="text"
+                   name="songTitle"
+                   placeholder="Enter Song Title" required>
+            <button type="submit">Get Lyrics</button>
+        </form>
+
+        <div th:if="${lyrics != null}" th:object="${lyrics}">
+            <h2>Song Lyrics:</h2>
+            <p th:each="line : ${lyrics}">
+                <span th:text="${line}"></span><br>
+            </p>
+
+        </div>
+        <div th:if="${error != null}" th:object="${error}">
+            <p th:text="${error}"></p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<section layout:fragment="body">
+    <div class="container">
+        <div class="row">
+            <!-- Image Panel -->
+            <div class="col-md-4">
+                <img th:src="@{${club.photoUrl}}" th:alt="'Club '+${club.title}+' picture'" class="img-fluid">
+            </div>
+
+            <!-- Club Information Panel -->
+            <div class="col-md-8">
+                <a th:href="@{/clubs}" th:class="btn-primary">Return to List</a>
+                <table class="custom-table">
+                    <tr >
+                        <td class="bold-text text-justify text-uppercase">Club name</td>
+                        <td th:text="': '+ ${club.title}" class="text-justify"></td>
+                    </tr>
+                    <tr>
+                        <td class="bold-text text-justify text-uppercase">Club content</td>
+                        <td th:text="': ' + ${club.content}" class="text-justify"></td>
+                    </tr>
+                </table>
+
+                    <table class="custom-table-event">
+                        <tr>
+                            <th th:class="text-center">Picture</th>
+                            <th th:class="text-center">Event Title</th>
+                            <th th:class="text-center">Event Content</th>
+                            <th th:class="text-center">Event Start On</th>
+                            <th th:class="text-center">Event End On</th>
+                            <th th:class="text-center">Modify</th>
+                        </tr>
+                        <tr th:each="event : ${events}">
+                            <td><img th:src="@{${event.photoUrl}}" alt="" th:class="custom-img-size"></td>
+                            <td th:text="${event.title}" th:class="text-center"></td>
+                            <td th:text="${event.content}" th:class="text-center"></td>
+                            <td th:text="${event.startTime}" th:class="text-center"></td>
+                            <td th:text="${event.endTime}" th:class="text-center"></td>
+                            <td><a th:href="@{/events/{eventId}/detail(eventId=${event.id})}" th:class="btn-primary">Edit</a></td>
+                        </tr>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="pagination font-alt">
+                                    <a th:href="@{${paginationUrl}(page=1, clubId=${clubId})}"><i class="fa fa-angle-left"></i></a>
+                                    <a th:each="pageNumber : ${#numbers.sequence(1, totalPages)}"
+                                       th:href="@{${paginationUrl}(page=${pageNumber}, clubId=${clubId})}"
+                                       th:class="${pageNumber == currentPage} ? 'active'">
+                                        <span th:text="${pageNumber}"></span>
+                                    </a>
+                                    <a th:href="@{${paginationUrl}(page=${totalPages}, clubId=${clubId})}"><i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </table>
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

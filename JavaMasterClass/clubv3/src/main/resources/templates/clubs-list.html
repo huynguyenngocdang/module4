@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Club List</title>
+</head>
+<body>
+
+<section layout:fragment="body">
+
+    <div class="module-small">
+        <div class="container">
+            <div class="row multi-columns-row">
+<!--                <div th:if="${success}" class="alert alert-success">-->
+<!--                    You are registered successfully!-->
+<!--                </div>-->
+                <div th:if="${param.success}" class="alert alert-success">
+                    You are registered successfully!
+                </div>
+                <div th:each="club : ${clubs}" class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="shop-item">
+                        <div class="shop-item-image"><img th:src="${club.photoUrl}" th:alt="${club.title}"/>
+                            <div class="shop-item-detail">
+                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/display(clubId=${club.id})}">
+                                    <span class="icon-book-open">
+                                        Display
+                                    </span>
+                                </a>
+                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/edit(clubId=${club.id})}">
+                                    <span class="icon-edit">
+                                        Edit
+                                    </span>
+                                </a>
+                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/delete(clubId=${club.id})}"
+                                   onclick="return confirmDelete()" id="deleteButton">
+                                    <span class="icon-caution">
+                                             Delete
+                                    </span>
+                                </a>
+                                <a class="btn btn-round btn-b" th:href="@{/events/{clubId}/new(clubId=${club.id})}">
+                                    <span class="icon-book-open">
+                                        Create Event
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="shop-item-title font-alt"><a href="#">
+                            <th:block th:text="${club.title}"></th:block>
+                        </a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pagination font-alt">
+                        <a th:href="@{${paginationUrl}(page=1, query=${query})}"><i class="fa fa-angle-left"></i></a>
+                        <a th:each="pageNumber : ${#numbers.sequence(1, totalPages)}"
+                           th:href="@{${paginationUrl}(page=${pageNumber}, query=${query})}"
+                           th:class="${pageNumber == currentPage} ? 'active'">
+                            <span th:text="${pageNumber}"></span>
+                        </a>
+                        <a th:href="@{${paginationUrl}(page=${totalPages}, query=${query})}"><i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function confirmDelete() {
+            return confirm('Are you sure you want to delete this club?');
+        }
+    </script>
+</section>
+
+</body>
+</html>

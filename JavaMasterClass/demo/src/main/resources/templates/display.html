@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Clubs</title>
+</head>
+<body>
+<a th:href="@{/clubs/new}"> Create new club</a>
+<h1>Club List</h1>
+<div th:each="club : ${clubs}">
+    <p th:text="${club.title}">Club Title</p>
+    <img th:src="@{/image/{id}(id=${club.id})}" />
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Club List</title>
+</head>
+<body>
+<section class="module-small" layout:fragment="body">
+    <div class="container">
+        <div class="row multi-columns-row">
+            <div th:each="club : ${clubs}" class="col-sm-6 col-md-4 col-lg-4">
+                <div class="shop-item">
+                    <img th:src="*{'data:image/png;base64,'+${club.clubImage}" alt="" />
+
+                    <div class="shop-item-image"><img th:src="" th:alt="${club.title}"/>
+                        <div class="shop-item-detail">
+
+                        </div>
+                    </div>
+                    <h4 class="shop-item-title font-alt"><a href="#">
+                        <th:block th:text="${club.title}"></th:block>
+                    </a></h4>
+                </div>
+            </div>
+        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-sm-12">-->
+<!--                <div class="pagination font-alt">-->
+<!--                    <a th:href="@{${paginationUrl}(page = 1, query=${query})}">-->
+<!--                        <i class="fa fa-angle-left"></i>-->
+<!--                    </a>-->
+<!--                    <a th:each="pageNumber :${#numbers.sequence(1, totalPages)}"-->
+<!--                        th:href="@{${pageNumber}(page = ${pageNumber}, query=${query})}"-->
+<!--                        th:class="${pageNumber == currentPage} ? 'active'">-->
+<!--                        <span th:text="${pageNumber}"></span>-->
+<!--                    </a>-->
+<!--                    <a th:href="@{${paginationUrl}(page = ${totalPages}, query=${query})}">-->
+<!--                    <i class="fa fa-angle-right"></i></a></div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</section>
+</body>
+</html>

@@ -6,42 +6,14 @@
       dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Club List</title>
 </head>
 <body>
 <section layout:fragment="body">
     <div class="container">
-        <form class="row">
-            <div class="col-sm-4 mb-sm-20">
-                <select class="form-control">
-                    <option selected="selected">Default Sorting</option>
-                    <option>Popular</option>
-                    <option>Latest</option>
-                    <option>Average Price</option>
-                    <option>High Price</option>
-                    <option>Low Price</option>
-                </select>
-            </div>
-            <div class="col-sm-2 mb-sm-20">
-                <select class="form-control">
-                    <option selected="selected">Woman</option>
-                    <option>Man</option>
-                </select>
-            </div>
-            <div class="col-sm-3 mb-sm-20">
-                <select class="form-control">
-                    <option selected="selected">All</option>
-                    <option>Coats</option>
-                    <option>Jackets</option>
-                    <option>Dresses</option>
-                    <option>Jumpsuits</option>
-                    <option>Tops</option>
-                    <option>Trousers</option>
-                </select>
-            </div>
-            <div class="col-sm-3">
-                <button class="btn btn-block btn-round btn-g" type="submit">Apply</button>
-            </div>
+        <form class="form-inline" th:action="@{/clubs/search}" method="get">
+            <input name="query" class="form-control mb-5 " type="search" placeholder="Search Club" aria-label="Search">
+            <button type="submit" class="btn btn-primary">Search</button>
         </form>
     </div>
 
@@ -50,34 +22,84 @@
             <div class="row multi-columns-row">
                 <div th:each="club : ${clubs}" class="col-sm-6 col-md-4 col-lg-4">
                     <div class="shop-item">
-                        <div class="shop-item-image"><img th:src="${club.photoUrl}" th:alt="${club.title}" />
-                            <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Edit</span></a></div>
+                        <div class="shop-item-image"><img th:src="${club.photoUrl}" th:alt="${club.title}"/>
+                            <div class="shop-item-detail">
+                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/display(clubId=${club.id})}">
+                                    <span class="icon-book-open">
+                                        Display
+                                    </span>
+                                </a>
+                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/edit(clubId=${club.id})}">
+                                    <span class="icon-edit">
+                                        Edit
+                                    </span>
+                                </a>
+                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/delete(clubId=${club.id})}">
+                                    <span class="icon-caution">
+                                        Delete
+                                    </span>
+                                </a>
+
+                                <a class="btn btn-round btn-b" th:href="@{/events/{clubId}/new(clubId=${club.id})}">
+                                    <span class="icon-book-open">
+                                        Create Event
+                                    </span>
+                                </a>
+                            </div>
                         </div>
-                        <h4 class="shop-item-title font-alt"><a href="#"><th:block th:text="${club.title}"></th:block></a></h4>
+                        <h4 class="shop-item-title font-alt"><a href="#">
+                            <th:block th:text="${club.title}"></th:block>
+                        </a></h4>
                     </div>
                 </div>
             </div>
+            <!--            <div class="row">-->
+            <!--                <div class="col-sm-12">-->
+            <!--                    <div class="pagination font-alt">-->
+            <!--                        <a href="#"><i class="fa fa-angle-left"></i></a>-->
+            <!--                        <a class="active" href="#">1</a>-->
+            <!--                        <a href="#">2</a>-->
+            <!--                        <a href="#">3</a>-->
+            <!--                        <a href="#">4</a>-->
+            <!--                        <a href="#"><i class="fa fa-angle-right"></i></a></div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+            <!--            <div class="row">-->
+            <!--                <div class="col-sm-12">-->
+<!--                                <div class="pagination font-alt">-->
+<!--                                    <a th:href="@{/clubs?page=1}"><i class="fa fa-angle-left"></i></a>-->
+<!--                                    <a th:each="pageNumber : ${#numbers.sequence(1, totalPages)}"-->
+<!--                                       th:href="@{/clubs(page=${pageNumber})}"-->
+<!--                                       th:class="${pageNumber == currentPage} ? 'active'">-->
+<!--                                        <span th:text="${pageNumber}"></span>-->
+<!--                                    </a>-->
+<!--                                    <a th:href="@{/clubs(page=${totalPages})}"><i class="fa fa-angle-right"></i></a>-->
+<!--                                </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
 <!--            <div class="row">-->
 <!--                <div class="col-sm-12">-->
 <!--                    <div class="pagination font-alt">-->
-<!--                        <a href="#"><i class="fa fa-angle-left"></i></a>-->
-<!--                        <a class="active" href="#">1</a>-->
-<!--                        <a href="#">2</a>-->
-<!--                        <a href="#">3</a>-->
-<!--                        <a href="#">4</a>-->
-<!--                        <a href="#"><i class="fa fa-angle-right"></i></a></div>-->
+<!--                        <a th:each="pageNumber : ${#numbers.sequence(1, totalPages)}"-->
+<!--                           th:href="@{/clubs/search?page=${pageNumber}&query=${query}}"-->
+<!--                           th:class="${pageNumber == currentPage} ? 'active'">-->
+<!--                            <span th:text="${pageNumber}"></span>-->
+<!--                        </a>-->
+<!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
+
             <div class="row">
                 <div class="col-sm-12">
                     <div class="pagination font-alt">
-                        <a th:href="@{/clubs?page=1}"><i class="fa fa-angle-left"></i></a>
+                        <a th:href="@{${paginationUrl}(page=1, query=${query})}"><i class="fa fa-angle-left"></i></a>
                         <a th:each="pageNumber : ${#numbers.sequence(1, totalPages)}"
-                           th:href="@{/clubs(page=${pageNumber})}"
+                           th:href="@{${paginationUrl}(page=${pageNumber}, query=${query})}"
                            th:class="${pageNumber == currentPage} ? 'active'">
                             <span th:text="${pageNumber}"></span>
                         </a>
-                        <a th:href="@{/clubs(page=totalPages)}"><i class="fa fa-angle-right"></i></a>
+                        <a th:href="@{${paginationUrl}(page=${totalPages}, query=${query})}"><i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>

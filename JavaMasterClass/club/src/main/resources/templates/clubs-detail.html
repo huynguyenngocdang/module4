@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<section layout:fragment="body">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img th:src="${club.photoUrl}" class="card-img-top" alt="Club Image">
+            </div>
+        </div>
+
+        <!-- Club Details Panel -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title" th:text="${club.title}"></h3>
+                    <p class="card-text">Here are the details of the club...</p>
+                    <p class="card-text">Club content: <span th:text="${club.content}"></span></p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Event</th>
+                            <th scope="col">Event Photo</th>
+                            <th scope="col">Event Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
