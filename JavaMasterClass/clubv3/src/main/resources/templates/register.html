@@ -12,6 +12,16 @@
     <section class="module">
         <div class="container">
             <div class="row">
+                <div th:if="${param.error}" class="alert alert-success">
+                    Invalid Username or password!
+                </div>
+                <div th:if="${param.logout}" class="alert alert-success">
+                    You have been logout!
+                </div>
+                <div th:if="${param.fail}" class="alert alert-success">
+                    Username or email already exist!
+                </div>
+
                 <div class="col-sm-8 col-sm-offset-2">
                     <h4 class="font-alt mb-0">New User</h4>
                     <hr class="divider-w mt-10 mb-20">
