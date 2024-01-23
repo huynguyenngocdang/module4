@@ -1,5 +1,6 @@
 package com.codegym.clubv3.dto;
 
+import com.codegym.clubv3.entity.UserEntity;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -23,5 +25,6 @@ public class ClubDto {
     private String photoUrl;
     private LocalDateTime createdOn;
     private LocalDateTime updatedOn;
-    private List<EventDto> eventsDto;
+    private List<EventDto> eventsDto = new ArrayList<>();
+    private UserEntity createdBy;
 }

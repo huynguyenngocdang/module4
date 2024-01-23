@@ -15,9 +15,9 @@
     <div class="module-small">
         <div class="container">
             <div class="row multi-columns-row">
-<!--                <div th:if="${success}" class="alert alert-success">-->
-<!--                    You are registered successfully!-->
-<!--                </div>-->
+                <!--                <div th:if="${success}" class="alert alert-success">-->
+                <!--                    You are registered successfully!-->
+                <!--                </div>-->
                 <div th:if="${param.success}" class="alert alert-success">
                     You are registered successfully!
                 </div>
@@ -30,22 +30,27 @@
                                         Display
                                     </span>
                                 </a>
-                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/edit(clubId=${club.id})}">
+                                <div th:if="${user.id} == ${club.createdBy.id}">
+                                    <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/edit(clubId=${club.id})}">
                                     <span class="icon-edit">
                                         Edit
                                     </span>
-                                </a>
-                                <a class="btn btn-round btn-b" th:href="@{/clubs/{clubId}/delete(clubId=${club.id})}"
-                                   onclick="return confirmDelete()" id="deleteButton">
+                                    </a>
+                                    <a class="btn btn-round btn-b"
+                                       th:href="@{/clubs/{clubId}/delete(clubId=${club.id})}"
+                                       onclick="return confirmDelete()" id="deleteButton">
                                     <span class="icon-caution">
                                              Delete
                                     </span>
-                                </a>
-                                <a class="btn btn-round btn-b" th:href="@{/events/{clubId}/new(clubId=${club.id})}">
+                                    </a>
+                                    <a class="btn btn-round btn-b" th:href="@{/events/{clubId}/new(clubId=${club.id})}">
                                     <span class="icon-book-open">
                                         Create Event
                                     </span>
-                                </a>
+                                    </a>
+                                </div>
+
+
                             </div>
                         </div>
                         <h4 class="shop-item-title font-alt"><a href="#">
@@ -63,7 +68,8 @@
                            th:class="${pageNumber == currentPage} ? 'active'">
                             <span th:text="${pageNumber}"></span>
                         </a>
-                        <a th:href="@{${paginationUrl}(page=${totalPages}, query=${query})}"><i class="fa fa-angle-right"></i></a>
+                        <a th:href="@{${paginationUrl}(page=${totalPages}, query=${query})}"><i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>

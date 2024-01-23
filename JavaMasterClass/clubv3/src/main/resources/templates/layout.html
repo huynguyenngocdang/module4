@@ -2,6 +2,7 @@
 <html lang="en-US"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
       dir="ltr">
 <head>
     <meta charset="utf-8">
@@ -63,23 +64,26 @@
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" th:href="@{/}">CLUB</a>
+                <button class="navbar-toggle" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" th:href="@{/}">CLUB</a>
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">My Club</a>
+                    <li class="dropdown"><a class="dropdown-toggle" href="#" >My Club</a>
                         <ul class="dropdown-menu">
                             <li><a th:href="@{/clubs}">List Club</a></li>
                             <li><a th:href="@{/clubs/new}">New Club</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Account</a>
-                        <ul class="dropdown-menu">
-                            <li><a th:href="@{/register}">Register</a></li>
-                            <li><a th:href="@{/login}">Login</a></li>
-                            <li><a th:href="@{/logout}">Logout</a></li>
-                        </ul>
-                    </li>
+                        <li class="dropdown" sec:authorize="!isAuthenticated()" >
+                            <a th:href="@{/register}">Register</a>
+                        </li>
+                        <li  class="dropdown" sec:authorize="!isAuthenticated()">
+                            <a th:href="@{/login}">Login</a>
+                        </li>
+                        <li class="dropdown" sec:authorize="isAuthenticated()">
+
+                            <a th:href="@{/logout}">Logout</a>
+                        </li>
                     <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Lyrics</a>
                         <ul class="dropdown-menu">
                             <li><a th:href="@{/lyric}">Find Lyric</a></li>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>List Role</title>
+</head>
+<body>
+<a th:href="@{/role/create}">Create new role</a>
+<h1>Roles</h1>
+<form>
+  Search by name:
+  <input name="search" type="text"/>
+  <input type="submit" value="Search"/>
+</form>
+<br/>
+<table border="1">
+  <tr>
+    <th>Description</th>
+    <th>Name</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <th:block th:each="role : ${roles}">
+    <tr>
+      <td th:text="${role.desc}"></td>
+      <td th:text="${role.name}"></td>
+      <td><a th:href="@{/role/edit/__${role.id}__ }">Edit</a></td>
+      <td><a th:href="@{/role/delete/__${role.id}__ }">Delete</a></td>
+    </tr>
+  </th:block>
+</table>
+</body>
+</html>

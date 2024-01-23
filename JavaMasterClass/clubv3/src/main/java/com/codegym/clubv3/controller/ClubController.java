@@ -3,8 +3,11 @@ package com.codegym.clubv3.controller;
 import com.codegym.clubv3.constant.VarConstant;
 import com.codegym.clubv3.dto.ClubDto;
 import com.codegym.clubv3.dto.EventDto;
+import com.codegym.clubv3.entity.UserEntity;
+import com.codegym.clubv3.security.SecurityUtil;
 import com.codegym.clubv3.service.ClubService;
 import com.codegym.clubv3.service.EventService;
+import com.codegym.clubv3.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -20,11 +23,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ClubController {
     private ClubService clubService;
     private EventService eventService;
+    private UserService userService;
 
 
-    public ClubController(ClubService clubService, EventService eventService) {
+    public ClubController(ClubService clubService, EventService eventService, UserService userService) {
         this.clubService = clubService;
         this.eventService = eventService;
+        this.userService = userService;
     }
 
     @GetMapping("/clubs")
@@ -34,6 +39,12 @@ public class ClubController {
         int pageSize = VarConstant.CLUB_PER_PAGE;
         Page<ClubDto> clubDtoPage = clubService.getClubsByPage(page, pageSize);
 
+        UserEntity user = new UserEntity();
+        String username = SecurityUtil.getSessionUser();
+        if(username!=null) {
+            user = userService.findByUsername(username);
+        }
+        model.addAttribute("user", user);
         model.addAttribute("clubs", clubDtoPage.getContent());
         model.addAttribute("currentPage", clubDtoPage.getNumber() + 1);
         model.addAttribute("totalPages", clubDtoPage.getTotalPages());
@@ -87,6 +98,8 @@ public class ClubController {
         ClubDto clubDto = clubService.findClubDtoById(clubId);
         int pageSize = 2;
         Page<EventDto> eventDtos = eventService.getEventsPageByClubId(clubId, page, pageSize);
+
+
         model.addAttribute("club", clubDto);
         model.addAttribute("events", eventDtos.getContent());
         model.addAttribute("currentPage", eventDtos.getNumber() + 1);
